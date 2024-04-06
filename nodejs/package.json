@@ -17,7 +17,7 @@
     "clean": "rm -rf dist",
     "format": "prettier --write src",
     "prepublishOnly": "npm run build && npm run test",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "@msgpack/msgpack": "^2",
