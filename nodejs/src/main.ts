@@ -23,6 +23,7 @@ export const spawnPyIpc = async ({
   const worker = spawn(python, [script], {
     stdio: ["pipe", "inherit", "inherit", "pipe", "pipe"],
     env: {
+      ...process.env,
       // By default, Python does not support relative imports from the entry script, and does not have the script's containing or working directory in sys.path.
       PYTHONPATH: [
         rootDir,
